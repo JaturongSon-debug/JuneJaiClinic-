@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="จูนใจ คลินิก (JuneJai Clinic) คลินิกให้คำปรึกษาและฟื้นฟูสุขภาพใจ ดูแลด้วยใจ ให้คุณสุขภาพดีในทุกช่วงชีวิต โดยไม่มีการจ่ายยา จองคิวล่วงหน้าออนไลน์ได้ทันที">
+  <meta name="keywords" content="จูนใจคลินิก, JuneJai Clinic, ปรึกษาสุขภาพจิต, บำบัดจิตวิทยา, จองคิวคลินิก, เพชรบูรณ์">
+  <title>JuneJai Clinic - จูนใจ คลินิก | จองคิวปรึกษาสุขภาพใจออนไลน์</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo-wrap" aria-label="JuneJai Clinic หน้าแรก">
+        <div class="brand-icon-symbol">จ</div>
+        <div class="brand-text-group">
+          <div class="brand-title">
+            จูนใจ คลินิก
+            <span class="en">Junejai</span>
+          </div>
+          <span class="brand-subtitle">General Medical & Counseling Clinic</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="เมนูหลัก">
+        <a href="#hero" class="nav-link">หน้าแรก</a>
+        <a href="#services" class="nav-link">บริการให้คำปรึกษา</a>
+        <a href="#booking" class="nav-link">ตารางเวลา & จองคิว</a>
+        <a href="#contact" class="nav-link">ติดต่อคลินิก</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="openAdminModalBtn" class="btn-admin-portal" title="สำหรับเจ้าหน้าที่จัดการตารางเวลา">
+          🔒 ระบบเจ้าหน้าที่
+        </button>
+        <a href="#booking" class="btn-book-cta">
+          📅 ตรวจสอบวันว่าง / จองคิว
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="safe-space-badge">
+            <span class="heart-dot"></span>
+            พื้นที่ปลอดภัย รับฟังด้วยหัวใจ ไม่ตัดสิน
+          </div>
+
+          <h1 class="hero-headline">
+            ดูแลด้วยใจ ให้คุณ...<br>
+            <span class="highlight-flower">สุขภาพดี</span> ในทุกช่วงชีวิต
+          </h1>
+
+          <p class="hero-tagline">
+            คลินิกให้คำปรึกษาและดูแลฟื้นฟูสภาพจิตใจ จูนความคิด คืนความสมดุลและความสุขให้ชีวิตของคุณและคนที่คุณรัก พร้อมต้อนรับทั้งผู้รับบริการรายใหม่และรายเก่า
+          </p>
+
+          <!-- Crucial Mental Health Non-pharmacological Notice -->
+          <div class="hero-non-medication-alert" role="alert">
+            <div class="alert-icon">🌱</div>
+            <div>
+              <strong>คำชี้แจงสำคัญเกี่ยวกับการให้บริการ:</strong><br>
+              จูนใจ คลินิก เน้นการบำบัดทางจิตวิทยา การพูดคุยให้คำปรึกษา (Counseling & Psychotherapy) เพื่อการฟื้นฟูจิตใจ 
+              <strong>โดยคลินิกไม่มีการจ่ายยาหรือจำหน่ายยาทางจิตเวชใดๆ ทั้งสิ้น</strong>
+            </div>
+          </div>
+
+          <div class="hero-actions-row">
+            <a href="#booking" class="btn-book-cta" style="padding: 14px 28px; font-size: 1rem;">
+              🗓️ เลือกวันและรอบเวลานัดหมาย
+            </a>
+            <a href="tel:0804795449" class="btn-admin-portal" style="padding: 13px 22px; font-size: 0.95rem;">
+              📞 โทร 080-479-5449
+            </a>
+          </div>
+
+          <!-- Clinic Operating Hours Card -->
+          <div class="hero-hours-card">
+            <div class="hours-item">
+              <span class="label">จันทร์ – ศุกร์ (รอบค่ำ)</span>
+              <span class="time">18:30 น. – 20:00 น.</span>
+              <span class="note">รอบละ 45 นาที (18:30 / 19:15)</span>
+            </div>
+            <div class="hours-item">
+              <span class="label">เสาร์ & วันหยุดนักขัตฤกษ์</span>
+              <span class="time">09:30 น. – 15:00 น.</span>
+              <span class="note">วันอาทิตย์: ปิดทำการ (วันหยุดเจ้าหน้าที่)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual-col">
+          <div class="brochure-artwork-frame">
+            <img src="โปรชัวร์ JuneJai Clinic.jpg" alt="Junejai Clinic ภาพวาดศิลปะดอกบัวและดอกโบตั๋น สื่อถึงความอบอุ่นและการฟื้นฟูจิตใจ" loading="eager">
+          </div>
+          <div class="hero-floating-quote">
+            <span class="quote-heart">♥</span> Your Health, Our Care
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services / Philosophy Section -->
+    <section id="services" class="section-services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Our Caring Services</span>
+          <h2 class="section-title">บริการปรึกษาและบำบัดสุขภาพใจ</h2>
+          <p class="section-desc">
+            เราสร้างบรรยากาศที่อบอุ่น เป็นส่วนตัว และปลอดภัยสูงสุด เพื่อให้คุณได้ปลดปล่อยความกังวลและค้นพบแนวทางรับมือกับชีวิตในแบบของคุณเอง
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card theme-pine">
+            <div class="service-icon-box">🌿</div>
+            <h3 class="service-title">การปรึกษาเพื่อจัดการความเครียด</h3>
+            <p class="service-text">
+              คลี่คลายความตึงเครียดจากภาระงาน การเรียน หรือความกดดันในชีวิตประจำวัน ฟื้นฟูสุขอนามัยการนอนและสร้างสมดุลชีวิตใหม่
+            </p>
+            <ul class="service-points">
+              <li>Burnout & ความเหนื่อยล้าสะสม</li>
+              <li>การนอนไม่หลับจากความวิตกกังวล</li>
+              <li>เทคนิคผ่อนคลายและสร้างสติ</li>
+            </ul>
+          </div>
+
+          <div class="service-card theme-peony">
+            <div class="service-icon-box">🌸</div>
+            <h3 class="service-title">บำบัดอารมณ์และจิตใจ (Psychotherapy)</h3>
+            <p class="service-text">
+              ร่วมสำรวจความคิดและอารมณ์ที่จมดิ่ง อารมณ์เศร้า ซึม ปมค้างคาใจ หรือความสูญเสีย เพื่อฟื้นคืนพลังใจให้เบ่งบานอีกครั้ง
+            </p>
+            <ul class="service-points">
+              <li>ภาวะอารมณ์ดิ่ง / ซึมเศร้า</li>
+              <li>การจัดการความโศกเศร้าและความสูญเสีย</li>
+              <li>การปรับกระบวนการคิดและทัศนคติเชิงบวก</li>
+            </ul>
+          </div>
+
+          <div class="service-card theme-lake">
+            <div class="service-icon-box">🤝</div>
+            <h3 class="service-title">ความสัมพันธ์และการเติบโตส่วนบุคคล</h3>
+            <p class="service-text">
+              ทำความเข้าใจความขัดแย้งในความสัมพันธ์ ทั้งครอบครัว คนรัก และเพื่อนร่วมงาน พร้อมสร้างความมั่นใจในตนเอง (Self-esteem)
+            </p>
+            <ul class="service-points">
+              <li>การสื่อสารเพื่อความเข้าใจในครอบครัว</li>
+              <li>การสร้างขอบเขตและการเห็นคุณค่าตนเอง</li>
+              <li>การปรับตัวในระยะเปลี่ยนผ่านของชีวิต</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Calendar & Booking Section -->
+    <section id="booking" class="section-booking">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Online Queue & Appointment</span>
+          <h2 class="section-title">ตารางนัดหมาย & ตรวจสอบวันเวลาว่าง</h2>
+          <p class="section-desc">
+            คลิกเลือกวันที่ในปฏิทินเพื่อดูรอบเวลาที่ว่าง จากนั้นเลือกรอบเวลาที่สะดวกเพื่อทำการจองคิวออนไลน์ได้ทันที
+          </p>
+        </div>
+
+        <div class="booking-panel-card">
+          <!-- Left: Calendar Grid -->
+          <div class="calendar-pane">
+            <div class="calendar-top-bar">
+              <h3 id="calendarMonthTitle" class="calendar-month-heading">ตุลาคม 2569</h3>
+              <div class="calendar-nav-buttons">
+                <button id="calPrevBtn" class="cal-nav-btn" aria-label="เดือนก่อนหน้า">‹</button>
+                <button id="calTodayBtn" class="cal-today-btn">วันนี้</button>
+                <button id="calNextBtn" class="cal-nav-btn" aria-label="เดือนถัดไป">›</button>
+              </div>
+            </div>
+
+            <!-- Weekday Headers -->
+            <div class="calendar-weekdays-row">
+              <div class="weekday-col-header sunday">อา.</div>
+              <div class="weekday-col-header">จ.</div>
+              <div class="weekday-col-header">อ.</div>
+              <div class="weekday-col-header">พ.</div>
+              <div class="weekday-col-header">พฤ.</div>
+              <div class="weekday-col-header">ศ.</div>
+              <div class="weekday-col-header saturday">ส.</div>
+            </div>
+
+            <!-- Calendar Days Container -->
+            <div id="calendarDaysGrid" class="calendar-days-grid">
+              <!-- Dynamically rendered via app.js -->
+            </div>
+
+            <!-- Legend Bar -->
+            <div class="calendar-legend-bar">
+              <div class="legend-item">
+                <span class="legend-dot dot-available"></span>
+                <span>มีรอบว่าง</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot dot-booked"></span>
+                <span>เต็มแล้ว</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot dot-closed"></span>
+                <span>ปิดทำการ (วันอาทิตย์/วันหยุด)</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot dot-selected"></span>
+                <span>วันที่เลือก</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Selected Date & Time Slot Selector -->
+          <div class="booking-action-pane">
+            <div class="pane-selected-date-card">
+              <div class="selected-date-info">
+                <h4 id="selectedDateDisplay">วันจันทร์ที่ 28 ตุลาคม 2569</h4>
+                <p id="selectedDateTypeNote">วันทำการปกติ (รอบค่ำ 18:30 - 20:00 น.)</p>
+              </div>
+              <div id="dateStatusPill" class="date-status-pill" style="background: var(--color-slot-available-bg); color: var(--color-slot-available);">
+                เปิดรับจอง
+              </div>
+            </div>
+
+            <div class="slot-list-title">
+              เลือกรอบเวลาที่สะดวก
+              <span>(รอบละ 45 นาที)</span>
+            </div>
+
+            <div id="slotsContainer" class="slots-grid">
+              <!-- Dynamically populated slots -->
+            </div>
+
+            <button id="proceedBookingBtn" class="btn-proceed-booking" disabled>
+              <span>ดำเนินการกรอกข้อมูลนัดหมาย</span>
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Clinic Location & Contact Section -->
+    <section id="contact" class="section-services" style="background: var(--color-bg);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Location & Directions</span>
+          <h2 class="section-title">ข้อมูลที่ตั้งและการติดต่อคลินิก</h2>
+          <p class="section-desc">
+            จูนใจ คลินิก พร้อมให้บริการทุกท่านด้วยความอบอุ่นและเป็นกันเอง ณ จังหวัดอุตรดิตถ์
+          </p>
+        </div>
+
+        <div class="services-grid" style="grid-template-columns: 1.2fr 1fr;">
+          <div class="service-card theme-pine" style="background: #FFF;">
+            <h3 class="service-title" style="margin-bottom: 16px;">📍 ที่อยู่คลินิก</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: var(--color-text-body);">
+              <strong>จูนใจ คลินิก (JuneJai Clinic)</strong><br>
+              141/1 ม.1 ซอย ประภัสสร ถ.บรมอาสน์ ต.ท่าเสา อ.เมือง จ.อุตรดิตถ์ 53000<br>
+              <span style="color: var(--color-text-muted); font-size: 0.9rem;">
+                (141/1 Moo 1, Soi Praphatsorn, Borom-At Road, Tha Sao, Mueang Uttaradit, Uttaradit 53000)
+              </span>
+            </p>
+
+            <div style="margin-top: 14px;">
+              <a href="https://www.google.com/maps/place/%E0%B8%88%E0%B8%B8%E0%B8%99%E0%B9%83%E0%B8%88+%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81+-+JuneJai+Clinic/@17.6072577,100.0721507,18.28z/data=!4m6!3m5!1s0x30df2f00252bc4fb:0xa65bf06faf611ae!8m2!3d17.6072954!4d100.0730054!16s%2Fg%2F11ydqsk42b?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="btn-admin-portal" style="background: var(--color-pine); color: #FFF; border-color: var(--color-pine); display: inline-flex; align-items: center; gap: 8px;">
+                🗺️ ดูพิกัดบน Google Maps นำทาง
+              </a>
+            </div>
+
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--color-surface-border);">
+              <h4 style="font-size: 1rem; color: var(--color-pine); margin-bottom: 10px;">⏰ เวลาทำการให้บริการ</h4>
+              <ul style="list-style: none; font-size: 0.95rem; line-height: 2;">
+                <li>• <strong>จันทร์ – ศุกร์:</strong> 18:30 น. – 20:00 น.</li>
+                <li>• <strong>เสาร์ และวันหยุดนักขัตฤกษ์:</strong> 09:30 น. – 15:00 น.</li>
+                <li>• <strong>วันอาทิตย์:</strong> ปิดทำการ (วันหยุดของเจ้าหน้าที่)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service-card theme-lake" style="background: #FFF; text-align: center; justify-content: center;">
+            <h3 class="service-title" style="margin-bottom: 12px;">📱 ช่องทางติดต่อด่วน</h3>
+            <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 20px;">
+              สอบถามข้อมูลเพิ่มเติม แอดไลน์ หรือโทรติดต่อเจ้าหน้าที่ได้ทันที
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 12px; max-width: 320px; margin: 0 auto; width: 100%;">
+              <a href="https://line.me/R/ti/p/~junejaiclinic" target="_blank" rel="noopener noreferrer" class="btn-book-cta" style="background: #06C755; justify-content: center;">
+                💬 LINE: junejaiclinic (แอดเพื่อน)
+              </a>
+              <div style="background: var(--color-surface-alt); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--color-text-body); text-align: left;">
+                • แอดจาก LINE ID: <strong>junejaiclinic</strong><br>
+                • หรือค้นหาด้วยเบอร์: <strong>0804795449</strong>
+              </div>
+              <a href="tel:0804795449" class="btn-book-cta" style="background: var(--color-pine); justify-content: center;">
+                📞 โทร: 080-479-5449
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61578983255968" target="_blank" rel="noopener noreferrer" class="btn-book-cta" style="background: #1877F2; justify-content: center;">
+                📘 Facebook: Junejai Clinic
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <h3>จูนใจ คลินิก (Junejai Clinic)</h3>
+          <p>
+            "ดูแลด้วยใจ ให้คุณ...สุขภาพดี ในทุกช่วงชีวิต ♥"<br>
+            พื้นที่ปลอดภัยและเป็นมิตรเพื่อรับฟังทุกเรื่องราวในใจคุณ
+          </p>
+          <div class="footer-notice-box">
+            ⚠️ <strong>หมายเหตุสำคัญ:</strong> คลินิกให้บริการด้านการปรึกษาและจิตบำบัดทางจิตวิทยา ไม่มีการจ่ายยาใดๆ ทั้งสิ้น กรณีภาวะฉุกเฉินวิกฤติต่อชีวิต กรุณาติดต่อสายด่วนสุขภาพจิต 1323 หรือสถานพยาบาลใกล้บ้านทันที
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">เวลาทำการ</h4>
+          <ul class="footer-contact-list">
+            <li>จันทร์ - ศุกร์: 18:30 - 20:00 น.</li>
+            <li>เสาร์ & วันหยุด: 09:30 - 15:00 น.</li>
+            <li>วันอาทิตย์: ปิดทำการ</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">ติดต่อเรา</h4>
+          <ul class="footer-contact-list">
+            <li>โทร: <a href="tel:0804795449">080 479 5449</a></li>
+            <li>LINE: <a href="https://line.me/R/ti/p/~junejaiclinic" target="_blank" rel="noopener noreferrer">junejaiclinic</a></li>
+            <li>ที่อยู่: 141/1 ม.1 ซอย ประภัสสร ถ.บรมอาสน์ ต.ท่าเสา อ.เมือง จ.อุตรดิตถ์ 53000</li>
+            <li><a href="https://www.google.com/maps/place/%E0%B8%88%E0%B8%B8%E0%B8%99%E0%B9%83%E0%B8%88+%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81+-+JuneJai+Clinic/@17.6072577,100.0721507,18.28z/data=!4m6!3m5!1s0x30df2f00252bc4fb:0xa65bf06faf611ae!8m2!3d17.6072954!4d100.0730054!16s%2Fg%2F11ydqsk42b?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">🗺️ พิกัด Google Maps</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61578983255968" target="_blank" rel="noopener noreferrer">Facebook เพจคลินิก</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <span>© 2026 Junejai Clinic. All rights reserved.</span>
+        <span>ระบบจองคิวออนไลน์และตารางนัดหมายผู้รับบริการ</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Button -->
+  <a href="https://line.me/R/ti/p/~junejaiclinic" target="_blank" rel="noopener noreferrer" class="floating-contact-btn" title="แชทผ่าน LINE กับเจ้าหน้าที่">
+    <span>💬 แชท LINE คลินิก</span>
+  </a>
+
+  <!-- ==========================================================================
+       Booking Form Modal
+       ========================================================================== -->
+  <div id="bookingModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="bookingModalHeading">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="bookingModalHeading">
+          <span>🌸</span> แบบฟอร์มจองคิวนัดหมาย
+        </h3>
+        <button id="closeBookingModalBtn" class="modal-close-btn" aria-label="ปิดหน้าต่าง">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="booking-summary-banner">
+          <div class="summary-text-col">
+            <p>วันและเวลาที่เลือกนัดหมาย:</p>
+            <h5 id="modalSelectedDateTime">วันจันทร์ที่ 28 ต.ค. 2569 เวลา 18:30 - 19:15 น.</h5>
+          </div>
+          <span style="font-size: 1.5rem;">⏱️</span>
+        </div>
+
+        <form id="clientBookingForm">
+          <!-- Client Type Selection -->
+          <div class="form-group">
+            <label class="form-label">สถานะผู้รับบริการ <span class="required">*</span></label>
+            <div class="client-type-selector">
+              <label class="client-type-option">
+                <input type="radio" name="clientType" value="new" checked>
+                <div class="client-type-card">
+                  <span class="title">🌱 ผู้รับบริการรายใหม่</span>
+                  <span class="subtitle">มารับคำปรึกษาครั้งแรก</span>
+                </div>
+              </label>
+
+              <label class="client-type-option">
+                <input type="radio" name="clientType" value="returning">
+                <div class="client-type-card">
+                  <span class="title">🌿 ผู้รับบริการรายเก่า</span>
+                  <span class="subtitle">เคสปรึกษาต่อเนื่อง</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="clientFullName" class="form-label">ชื่อ - นามสกุล หรือ ชื่อเล่นที่สะดวกให้เรียก <span class="required">*</span></label>
+            <input type="text" id="clientFullName" class="form-control" placeholder="เช่น คุณสมใจ หรือ สมใจ ใจดี" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientPhone" class="form-label">เบอร์โทรศัพท์ติดต่อ <span class="required">*</span></label>
+            <input type="tel" id="clientPhone" class="form-control" placeholder="เช่น 0812345678" pattern="[0-9]{9,10}" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientLineId" class="form-label">LINE ID <span class="required">*</span></label>
+            <input type="text" id="clientLineId" class="form-control" placeholder="ระบุ LINE ID สำหรับรับข้อความยืนยันคิว" required>
+          </div>
+
+          <div class="form-group">
+            <label for="clientNotes" class="form-label">ประเด็นที่สบายใจจะแจ้งเบื้องต้น <span class="required">*</span></label>
+            <textarea id="clientNotes" class="form-control" placeholder="ระบุประเด็นที่ต้องการปรึกษา เช่น ความเครียด, การนอนหลับ, หรือเรื่องที่กังวลใจ" required minlength="3"></textarea>
+          </div>
+
+          <!-- Crucial Mental Health Non-pharmacological Checkbox -->
+          <label class="form-checkbox-label">
+            <input type="checkbox" id="acceptNonMedication" required>
+            <span>
+              <strong>ข้าพเจ้ารับทราบและเข้าใจว่า:</strong> จูนใจ คลินิก ให้บริการคำปรึกษาและบำบัดทางจิตวิทยา 
+              <u>โดยไม่มีการสั่งยาหรือจ่ายยาทางจิตเวชใดๆ ทั้งสิ้น</u>
+            </span>
+          </label>
+
+          <button type="submit" class="btn-submit-booking">
+            ยืนยันการจองคิวรับคำปรึกษา
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Booking Confirmation / Success Modal
+       ========================================================================== -->
+  <div id="successModalOverlay" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-body success-view">
+        <div class="success-check-icon">✓</div>
+        <h3 style="font-size: 1.45rem; color: var(--color-pine); margin-bottom: 6px;">ส่งคำขอนัดหมายเรียบร้อยแล้ว</h3>
+        <p style="font-size: 0.95rem; color: var(--color-text-muted);">
+          คลินิกได้รับข้อมูลการจองของท่านและบันทึกลงในระบบเรียบร้อย
+        </p>
+
+        <div class="booking-code-card">
+          <div class="booking-code-title">รหัสการนัดหมายของคุณ (Booking ID)</div>
+          <div id="confirmedBookingCode" class="booking-code-val">JJ-20261028-01</div>
+          <div id="confirmedDateTimeText" style="font-size: 0.95rem; color: var(--color-pine); margin-top: 6px; font-weight: 600;">
+            วันจันทร์ที่ 28 ต.ค. 2569 เวลา 18:30 น.
+          </div>
+        </div>
+
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-surface-border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 18px; text-align: left; font-size: 0.88rem; line-height: 1.6;">
+          <strong style="color: var(--color-pine);">📲 วิธีติดต่อและส่งข้อมูลเข้า LINE คลินิก:</strong><br>
+          • <strong>วิธีที่ 1:</strong> กดปุ่มสีเขียวด้านล่าง เพื่อเปิดแชท LINE และส่งสรุปคิวนัดหมายทันที<br>
+          • <strong>วิธีที่ 2:</strong> แอดเพื่อนผ่าน LINE ID: <strong>junejaiclinic</strong><br>
+          • <strong>วิธีที่ 3:</strong> แอดเพื่อนด้วยเบอร์โทรศัพท์: <strong>0804795449</strong>
+        </div>
+
+        <div class="success-action-buttons">
+          <a id="lineShareConfirmationBtn" href="https://line.me/R/ti/p/~junejaiclinic" target="_blank" rel="noopener noreferrer" class="btn-line-notify">
+            💬 ส่งข้อความแจ้งเตือนเข้า LINE: junejaiclinic
+          </a>
+          <button id="closeSuccessModalBtn" class="btn-admin-portal" style="justify-content: center; padding: 12px;">
+            เสร็จสิ้น / กลับสู่หน้าหลัก
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       Admin / Staff Management Portal Modal
+       ========================================================================== -->
+  <div id="adminModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="adminModalHeading">
+    <div class="modal-dialog modal-dialog-large">
+      <div class="modal-header">
+        <h3 id="adminModalHeading">
+          <span>⚙️</span> ระบบจัดการตารางนัดหมาย (Admin & Staff Portal)
+        </h3>
+        <button id="closeAdminModalBtn" class="modal-close-btn" aria-label="ปิดหน้าต่าง">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- 1. Admin PIN Login Form -->
+        <div id="adminLoginSection" class="admin-login-box">
+          <div style="font-size: 2.2rem; margin-bottom: 10px;">🔐</div>
+          <h4 style="font-size: 1.25rem; color: var(--color-pine); margin-bottom: 8px;">กรุณากรอกรหัส PIN เจ้าหน้าที่</h4>
+          <p style="font-size: 0.88rem; color: var(--color-text-muted); margin-bottom: 20px;">
+            สำหรับบุคลากรคลินิก เพื่อจัดการวันว่าง รอบเวลา และสถานะการจองคิว
+          </p>
+
+          <form id="adminLoginForm">
+            <input type="password" id="adminPinInput" class="form-control pin-input-field" maxlength="6" placeholder="••••" required autofocus>
+            <p style="font-size: 0.75rem; color: var(--color-text-light); margin-top: 6px;">(รหัสเริ่มต้น: 1234)</p>
+            <button type="submit" class="btn-proceed-booking" style="margin-top: 18px;">
+              เข้าสู่ระบบ
+            </button>
+          </form>
+        </div>
+
+        <!-- 2. Admin Dashboard & Controls (Visible after login) -->
+        <div id="adminDashboardSection" style="display: none;">
+          <!-- Metrics Row -->
+          <div class="admin-stats-row">
+            <div class="stat-metric-card">
+              <div class="stat-label">นัดหมายทั้งหมด</div>
+              <div id="statTotalCount" class="stat-number">0</div>
+            </div>
+            <div class="stat-metric-card">
+              <div class="stat-label">นัดหมายวันนี้</div>
+              <div id="statTodayCount" class="stat-number">0</div>
+            </div>
+            <div class="stat-metric-card">
+              <div class="stat-label">รอดำเนินการ</div>
+              <div id="statPendingCount" class="stat-number">0</div>
+            </div>
+            <div class="stat-metric-card">
+              <div class="stat-label">ยืนยันแล้ว</div>
+              <div id="statConfirmedCount" class="stat-number">0</div>
+            </div>
+          </div>
+
+          <!-- Admin Tabs -->
+          <div class="admin-dashboard-tabs">
+            <button class="admin-tab-btn active" data-tab="tabAppointments">📋 รายการนัดหมาย</button>
+            <button class="admin-tab-btn" data-tab="tabSlotManager">🗓️ จัดการวันและรอบเวลา</button>
+            <button class="admin-tab-btn" data-tab="tabManualBooking">➕ เพิ่มคิวนอกรอบ/โทรนัด</button>
+            <button class="admin-tab-btn" data-tab="tabSettings">⚙️ การตั้งค่า & สำรองข้อมูล</button>
+          </div>
+
+          <!-- Tab 1: Appointments List -->
+          <div id="tabAppointments" class="admin-tab-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <h4 style="font-size: 1rem; color: var(--color-pine);">รายการนัดหมายล่าสุด</h4>
+              <div style="display: flex; gap: 8px;">
+                <button id="adminRefreshBtn" class="btn-admin-portal" style="padding: 6px 12px;">🔄 รีเฟรช</button>
+                <button id="adminExportCsvBtn" class="btn-admin-portal" style="padding: 6px 12px;">📥 ดาวน์โหลด CSV</button>
+              </div>
+            </div>
+
+            <div class="admin-table-wrap">
+              <table class="admin-data-table">
+                <thead>
+                  <tr>
+                    <th>รหัสคิว</th>
+                    <th>วันที่ - เวลา</th>
+                    <th>ประเภท</th>
+                    <th>ชื่อผู้รับบริการ</th>
+                    <th>เบอร์โทร</th>
+                    <th>สถานะ</th>
+                    <th>การจัดการ</th>
+                  </tr>
+                </thead>
+                <tbody id="adminAppointmentsTbody">
+                  <!-- Dynamically populated rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Tab 2: Slot and Holiday Manager -->
+          <div id="tabSlotManager" class="admin-tab-content" style="display: none;">
+            <div class="admin-tools-card">
+              <h4 style="font-size: 1.05rem; color: var(--color-pine); margin-bottom: 12px;">🔒 ปิดทำการวันพิเศษ (Special Holiday)</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">
+                เลือกวันที่ต้องการประกาศหยุดทำการชั่วคราว ปฏิทินจะแสดงเป็นวันปิดและไม่สามารถจองได้
+              </p>
+              <div class="tools-row">
+                <input type="date" id="adminHolidayDateInput" class="form-control" style="max-width: 200px;">
+                <input type="text" id="adminHolidayReasonInput" class="form-control" placeholder="เหตุผล (เช่น วันหยุดนักขัตฤกษ์พิเศษ)" style="max-width: 300px;">
+                <button id="adminAddHolidayBtn" class="btn-admin-portal" style="background: var(--color-peony); color: #FFF; border-color: var(--color-peony);">
+                  ➕ บันทึกวันหยุด
+                </button>
+              </div>
+
+              <div id="adminHolidaysList" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
+                <!-- List of custom holidays -->
+              </div>
+            </div>
+
+            <div class="admin-tools-card">
+              <h4 style="font-size: 1.05rem; color: var(--color-pine); margin-bottom: 12px;">🚫 ล็อกรอบเวลาเฉพาะ (Block Specific Slot)</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px;">
+                เลือกล็อกรอบเวลาเฉพาะกิจ เช่น เจ้าหน้าที่ติดภารกิจ หรือปิดรอบเวลาเฉพาะบางวัน
+              </p>
+              <div class="tools-row">
+                <input type="date" id="adminBlockDateInput" class="form-control" style="max-width: 180px;">
+                <input type="time" id="adminBlockTimeInput" class="form-control" style="max-width: 140px;" value="18:30">
+                <button id="adminBlockSlotBtn" class="btn-admin-portal">
+                  🚫 ล็อกรอบเวลานี้
+                </button>
+              </div>
+
+              <div id="adminBlockedSlotsList" style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 8px;">
+                <!-- List of blocked slots -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Manual Booking (Phone-in or Walk-in) -->
+          <div id="tabManualBooking" class="admin-tab-content" style="display: none;">
+            <div class="admin-tools-card">
+              <h4 style="font-size: 1.05rem; color: var(--color-pine); margin-bottom: 12px;">📞 ลงบันทึกการนัดหมายทางโทรศัพท์ / วอล์กอิน</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 16px;">
+                สำหรับผู้รับบริการที่โทรเข้ามานัดหมายผ่านเบอร์ 080-479-5449 เจ้าหน้าที่สามารถลงคิวแทนได้ทันที
+              </p>
+
+              <form id="adminManualBookingForm">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                  <div class="form-group">
+                    <label class="form-label">วันที่ต้องการนัดหมาย *</label>
+                    <input type="date" id="manualDate" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">รอบเวลา *</label>
+                    <input type="time" id="manualTime" class="form-control" value="18:30" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">ประเภทผู้รับบริการ</label>
+                    <select id="manualClientType" class="form-control">
+                      <option value="new">ผู้รับบริการรายใหม่</option>
+                      <option value="returning">ผู้รับบริการรายเก่า</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">ชื่อ - นามสกุล *</label>
+                    <input type="text" id="manualName" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">เบอร์โทรศัพท์ *</label>
+                    <input type="tel" id="manualPhone" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">บันทึกเพิ่มเติม</label>
+                    <input type="text" id="manualNotes" class="form-control" placeholder="หมายเหตุของเจ้าหน้าที่">
+                  </div>
+                </div>
+
+                <button type="submit" class="btn-proceed-booking" style="margin-top: 14px;">
+                  💾 บันทึกการนัดหมาย
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Tab 4: Settings & Data Backup -->
+          <div id="tabSettings" class="admin-tab-content" style="display: none;">
+            <div class="admin-tools-card">
+              <h4 style="font-size: 1.05rem; color: var(--color-pine); margin-bottom: 12px;">🔑 เปลี่ยนรหัสผ่าน PIN</h4>
+              <form id="changePinForm" style="display: flex; gap: 12px; align-items: flex-end;">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">รหัส PIN ใหม่ (ตัวเลข 4-6 หลัก)</label>
+                  <input type="password" id="newPinInput" class="form-control" minlength="4" maxlength="6" required style="width: 200px;">
+                </div>
+                <button type="submit" class="btn-admin-portal">
+                  บันทึก PIN ใหม่
+                </button>
+              </form>
+            </div>
+
+            <div class="admin-tools-card">
+              <h4 style="font-size: 1.05rem; color: var(--color-pine); margin-bottom: 12px;">💾 สำรองและกู้คืนข้อมูล (Backup & Restore)</h4>
+              <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 14px;">
+                ส่งออกข้อมูลการนัดหมายเป็นไฟล์ JSON เพื่อเก็บบันทึก หรือนำเข้าไฟล์ข้อมูลสำรอง
+              </p>
+              <div class="tools-row">
+                <button id="adminExportJsonBtn" class="btn-admin-portal">
+                  📤 ส่งออกข้อมูลสำรอง (Export JSON)
+                </button>
+                <label class="btn-admin-portal" style="cursor: pointer;">
+                  📥 กู้คืนข้อมูล (Import JSON)
+                  <input type="file" id="adminImportJsonInput" accept=".json" style="display: none;">
+                </label>
+                <button id="adminResetDataBtn" class="btn-admin-portal" style="color: var(--color-peony-dark);">
+                  ⚠️ รีเซ็ตข้อมูลเป็นค่าเริ่มต้น
+                </button>
+              </div>
+            </div>
+
+            <div style="text-align: right; margin-top: 24px;">
+              <button id="adminLogoutBtn" class="btn-admin-portal" style="color: var(--color-peony-dark);">
+                🚪 ออกจากระบบเจ้าหน้าที่
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
