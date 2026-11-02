@@ -1,5 +1,5 @@
 /**
- * JuneJai Clinic (จุนใจ คลินิค) - Core Application Logic
+ * JuneJai Clinic (จุนใจ คลินิก) - Core Application Logic
  * Single Page Booking & Admin Schedule Management
  */
 
@@ -367,7 +367,7 @@
       closedMsg.style.color = 'var(--color-text-muted)';
       closedMsg.innerHTML = `
         <div style="font-size: 2rem; margin-bottom: 8px;">🛋️</div>
-        <strong>วันนี้คลินิคปิดทำการ</strong>
+        <strong>วันนี้คลินิกปิดทำการ</strong>
         <p style="font-size: 0.85rem; margin-top: 4px;">${rules.reason}</p>
         <p style="font-size: 0.8rem; margin-top: 10px; color: var(--color-peony);">กรุณาเลือกวันอื่นที่มีสัญลักษณ์ "มีรอบว่าง" ในปฏิทิน</p>
       `;
@@ -510,7 +510,7 @@
     }
 
     if (!acceptNonMed) {
-      alert('กรุณาทำเครื่องหมายยินยอมรับทราบว่าคลินิคไม่มีการจ่ายยาใดๆ ทั้งสิ้น');
+      alert('กรุณาทำเครื่องหมายยินยอมรับทราบเงื่อนไขการนัดหมายของคลินิก');
       return;
     }
 
@@ -559,7 +559,7 @@
     // Setup LINE notify URL with complete appointment payload
     const clientTypeLabel = clientType === 'new' ? '🌱 ผู้รับบริการรายใหม่' : '🌿 ผู้รับบริการรายเก่า';
     const lineMessage = encodeURIComponent(
-      `🌸 นัดหมายคิวใหม่ - จุนใจ คลินิค (JuneJai Clinic)\n` +
+      `🌸 นัดหมายคิวใหม่ - จุนใจ คลินิก (JuneJai Clinic)\n` +
       `━━━━━━━━━━━━━━━━━━\n` +
       `📌 รหัสคิว: ${bookingCode}\n` +
       `👤 สถานะ: ${clientTypeLabel}\n` +
@@ -570,7 +570,6 @@
       `⏱️ รอบเวลา: ${selectedSlot.time} - ${selectedSlot.endTime} น.\n` +
       `📝 ประเด็นที่ปรึกษา: ${notes}\n` +
       `━━━━━━━━━━━━━━━━━━\n` +
-      `⚠️ หมายเหตุ: จุนใจ คลินิค ให้บริการคำปรึกษาทางจิตวิทยา (ไม่มีการจ่ายยา)\n` +
       `📍 ที่อยู่: 141/1 ม.1 ซอย ประภัสสร ถ.บรมอาสน์ ต.ท่าเสา อ.เมือง จ.อุตรดิตถ์ 53000\n` +
       `*(ส่งข้อมูลอัตโนมัติจากระบบจองคิวออนไลน์)*`
     );

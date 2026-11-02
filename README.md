@@ -1,17 +1,17 @@
-# JuneJai Clinic - จุนใจ คลินิค 🌸
+# JuneJai Clinic - จุนใจ คลินิก 🌸
 > **Online Queue & Appointment Web Application**  
 > *"ดูแลด้วยใจ ให้คุณ...สุขภาพดี ในทุกช่วงชีวิต ♥"*
 
-เว็บไซต์ Single Page Web Application สำหรับตรวจสอบตารางเวลาว่างและนัดหมายคิวออนไลน์สำหรับ **จุนใจ คลินิค (JuneJai Clinic)** โดยออกแบบขึ้นสำหรับการให้คำปรึกษาและจิตบำบัดทางสุขภาพจิตโดยเฉพาะ
+เว็บไซต์ Single Page Web Application สำหรับตรวจสอบตารางเวลาว่างและนัดหมายคิวออนไลน์สำหรับ **จุนใจ คลินิก (JuneJai Clinic)** โดยออกแบบขึ้นสำหรับการให้คำปรึกษาและจิตบำบัดทางสุขภาพจิตโดยเฉพาะ
 
 ---
 
-## 📍 ข้อมูลที่ตั้งและการติดต่อคลินิค
+## 📍 ข้อมูลที่ตั้งและการติดต่อคลินิก
 - **ที่อยู่:** 141/1 ม.1 ซอย ประภัสสร ถ.บรมอาสน์ ต.ท่าเสา อ.เมือง จ.อุตรดิตถ์ 53000
-- **พิกัด Google Maps:** [Google Maps พิกัดคลินิค](https://www.google.com/maps/place/%E0%B8%88%E0%B8%B8%E0%B8%99%E0%B9%83%E0%B8%88+%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81+-+JuneJai+Clinic/@17.6072577,100.0721507,18.28z/data=!4m6!3m5!1s0x30df2f00252bc4fb:0xa65bf06faf611ae!8m2!3d17.6072954!4d100.0730054!16s%2Fg%2F11ydqsk42b?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D)
+- **พิกัด Google Maps:** [Google Maps พิกัดคลินิก](https://www.google.com/maps/place/%E0%B8%88%E0%B8%B8%E0%B8%99%E0%B9%83%E0%B8%88+%E0%B8%84%E0%B8%A5%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%81+-+JuneJai+Clinic/@17.6072577,100.0721507,18.28z/data=!4m6!3m5!1s0x30df2f00252bc4fb:0xa65bf06faf611ae!8m2!3d17.6072954!4d100.0730054!16s%2Fg%2F11ydqsk42b?authuser=0&entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D)
 - **เบอร์โทรศัพท์:** 080-479-5449
 - **LINE ID:** `junejaiclinic` (สามารถแอดเพื่อนด้วย LINE ID หรือ เบอร์โทร 0804795449)
-- **Facebook Page:** [JuneJai Clinic - จุนใจ คลินิค](https://www.facebook.com/profile.php?id=61578983255968)
+- **Facebook Page:** [JuneJai Clinic - จุนใจ คลินิก](https://www.facebook.com/profile.php?id=61578983255968)
 
 ---
 
@@ -23,8 +23,7 @@
 ---
 
 ## 🌿 ข้อกำหนดการให้บริการ
-- จุนใจ คลินิค ให้บริการด้านการปรึกษาทางจิตวิทยาและจิตบำบัด (Counseling & Psychotherapy)
-- **ไม่มีการจ่ายยาหรือจำหน่ายยาทางจิตเวชใดๆ ทั้งสิ้น**
+- จุนใจ คลินิก ให้บริการด้านการปรึกษาทางจิตวิทยาและจิตบำบัด (Counseling & Psychotherapy)
 - ในแบบฟอร์มการจอง จำเป็นต้องระบุสถานะ (รายใหม่/รายเก่า), ชื่อ-นามสกุล, เบอร์โทรศัพท์, LINE ID, และประเด็นที่สบายใจจะแจ้งเบื้องต้น
 
 ---
