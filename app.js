@@ -7,7 +7,7 @@
   'use strict';
 
   // --- Constants & Config ---
-  const STORAGE_KEY = 'junejai_clinic_state_v2';
+  const STORAGE_KEY = 'junejai_clinic_state_v3';
   const ADMIN_SESSION_KEY = 'junejai_admin_authenticated';
 
   const THAI_MONTHS = [
@@ -20,19 +20,20 @@
   ];
 
   // Default Standard Operating Slots
-  // Mon - Fri: 18:30 - 20:00 (2 sessions of 45 mins)
+  // Mon - Fri: 18:00 - 20:00 (2 sessions of 45 mins with 15 min rest)
   const WEEKDAY_SLOTS = [
-    { time: '18:30', endTime: '19:15', label: '18:30 - 19:15 น. (รอบค่ำ 1)' },
-    { time: '19:15', endTime: '20:00', label: '19:15 - 20:00 น. (รอบค่ำ 2)' }
+    { time: '18:00', endTime: '18:45', label: '18:00 - 18:45 น. (รอบค่ำ 1)' },
+    { time: '19:00', endTime: '19:45', label: '19:00 - 19:45 น. (รอบค่ำ 2)' }
   ];
 
-  // Saturday & Holidays: 09:30 - 15:00 (5 sessions of 45 mins)
-  const WEEKEND_SLOTS = [
-    { time: '09:30', endTime: '10:15', label: '09:30 - 10:15 น. (รอบเช้า 1)' },
-    { time: '10:30', endTime: '11:15', label: '10:30 - 11:15 น. (รอบเช้า 2)' },
-    { time: '11:30', endTime: '12:15', label: '11:30 - 12:15 น. (รอบเช้า 3)' },
+  // Saturday: 09:00 - 16:00 (6 sessions of 45 mins with 15 min rest, lunch break 12:00 - 13:00)
+  const SATURDAY_SLOTS = [
+    { time: '09:00', endTime: '09:45', label: '09:00 - 09:45 น. (รอบเช้า 1)' },
+    { time: '10:00', endTime: '10:45', label: '10:00 - 10:45 น. (รอบเช้า 2)' },
+    { time: '11:00', endTime: '11:45', label: '11:00 - 11:45 น. (รอบเช้า 3)' },
     { time: '13:00', endTime: '13:45', label: '13:00 - 13:45 น. (รอบบ่าย 1)' },
-    { time: '14:00', endTime: '14:45', label: '14:00 - 14:45 น. (รอบบ่าย 2)' }
+    { time: '14:00', endTime: '14:45', label: '14:00 - 14:45 น. (รอบบ่าย 2)' },
+    { time: '15:00', endTime: '15:45', label: '15:00 - 15:45 น. (รอบบ่าย 3)' }
   ];
 
   // --- State Initialization ---
@@ -53,15 +54,15 @@
         { date: `${y}-${m}-31`, reason: 'วันหยุดพิเศษประจำสิ้นเดือน' }
       ],
       blockedSlots: [
-        { date: `${y}-${m}-${d}`, time: '18:30' }
+        { date: `${y}-${m}-${d}`, time: '18:00' }
       ],
       appointments: [
         {
           id: 'JJ-' + Date.now().toString().slice(-6),
           code: `JJ-${y}${m}${d}-01`,
           date: `${y}-${m}-${d}`,
-          time: '18:30',
-          endTime: '19:15',
+          time: '18:00',
+          endTime: '18:45',
           clientType: 'new',
           name: 'คุณพัชรา กิจไพศาล',
           phone: '0812345678',
@@ -74,8 +75,8 @@
           id: 'JJ-' + (Date.now() - 1000).toString().slice(-6),
           code: `JJ-${y}${tm}${td}-02`,
           date: `${y}-${tm}-${td}`,
-          time: '19:15',
-          endTime: '20:00',
+          time: '19:00',
+          endTime: '19:45',
           clientType: 'returning',
           name: 'คุณธีรพงษ์ วิเศษสุข',
           phone: '0898765432',
@@ -206,17 +207,17 @@
     if (dayOfWeek === 0) {
       return {
         isClosed: true,
-        reason: 'วันอาทิตย์: ปิดทำการ (วันหยุดประจำสัปดาห์ของเจ้าหน้าที่)',
+        reason: 'วันอาทิตย์: ปิดทำการ (วันหยุดประจำสัปดาห์)',
         slots: []
       };
     }
 
-    // 2. Custom holiday check
+    // 2. Custom holiday / Public holiday check
     const customHoliday = state.customHolidays.find(h => h.date === dateStr);
     if (customHoliday) {
       return {
         isClosed: true,
-        reason: `วันหยุดพิเศษ: ${customHoliday.reason}`,
+        reason: `วันหยุดพิเศษ/นักขัตฤกษ์: ${customHoliday.reason}`,
         slots: []
       };
     }
@@ -225,13 +226,13 @@
     if (dayOfWeek === 6) {
       return {
         isClosed: false,
-        reason: 'วันเสาร์ และวันหยุด (เปิดทำการ 09:30 - 15:00 น.)',
-        slots: WEEKEND_SLOTS
+        reason: 'วันเสาร์ (เปิดทำการ 09:00 - 16:00 น.)',
+        slots: SATURDAY_SLOTS
       };
     } else {
       return {
         isClosed: false,
-        reason: 'วันทำการปกติ (เปิดทำการรอบค่ำ 18:30 - 20:00 น.)',
+        reason: 'วันทำการปกติ (เปิดทำการรอบค่ำ 18:00 - 20:00 น.)',
         slots: WEEKDAY_SLOTS
       };
     }
