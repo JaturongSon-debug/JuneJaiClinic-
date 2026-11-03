@@ -7,7 +7,7 @@
   'use strict';
 
   // --- Constants & Config ---
-  const STORAGE_KEY = 'junejai_clinic_state_v4';
+  const STORAGE_KEY = 'junejai_clinic_state_v5';
   const ADMIN_SESSION_KEY = 'junejai_admin_authenticated';
 
   const THAI_MONTHS = [
@@ -198,6 +198,83 @@
   const statPendingCount = document.getElementById('statPendingCount');
   const statConfirmedCount = document.getElementById('statConfirmedCount');
 
+  // --- Automated Thai Public Holidays (2025 - 2027) ---
+  const THAI_PUBLIC_HOLIDAYS = {
+    // 2025
+    '2025-01-01': 'วันขึ้นปีใหม่',
+    '2025-02-12': 'วันมาฆบูชา',
+    '2025-04-06': 'วันจักรี',
+    '2025-04-07': 'วันชดเชยวันจักรี',
+    '2025-04-13': 'วันสงกรานต์',
+    '2025-04-14': 'วันสงกรานต์',
+    '2025-04-15': 'วันสงกรานต์',
+    '2025-04-16': 'วันชดเชยวันสงกรานต์',
+    '2025-05-01': 'วันแรงงานแห่งชาติ',
+    '2025-05-04': 'วันฉัตรมงคล',
+    '2025-05-05': 'วันชดเชยวันฉัตรมงคล',
+    '2025-05-11': 'วันวิสาขบูชา',
+    '2025-05-12': 'วันชดเชยวันวิสาขบูชา',
+    '2025-06-03': 'วันเฉลิมพระชนมพรรษาสมเด็จพระบรมราชินี',
+    '2025-07-10': 'วันอาสาฬหบูชา',
+    '2025-07-11': 'วันเข้าพรรษา',
+    '2025-07-28': 'วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว',
+    '2025-08-12': 'วันแม่แห่งชาติ',
+    '2025-10-13': 'วันนวมินทรมหาราช',
+    '2025-10-23': 'วันปิยมหาราช',
+    '2025-12-05': 'วันพ่อแห่งชาติ / วันชาติ',
+    '2025-12-10': 'วันรัฐธรรมนูญ',
+    '2025-12-31': 'วันสิ้นปี',
+
+    // 2026
+    '2026-01-01': 'วันขึ้นปีใหม่',
+    '2026-01-02': 'วันหยุดพิเศษเทศกาลปีใหม่',
+    '2026-03-03': 'วันมาฆบูชา',
+    '2026-04-06': 'วันจักรี',
+    '2026-04-13': 'วันสงกรานต์',
+    '2026-04-14': 'วันสงกรานต์',
+    '2026-04-15': 'วันสงกรานต์',
+    '2026-05-01': 'วันแรงงานแห่งชาติ',
+    '2026-05-04': 'วันฉัตรมงคล',
+    '2026-05-31': 'วันวิสาขบูชา',
+    '2026-06-01': 'วันชดเชยวันวิสาขบูชา',
+    '2026-06-03': 'วันเฉลิมพระชนมพรรษาสมเด็จพระบรมราชินี',
+    '2026-07-28': 'วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว',
+    '2026-07-29': 'วันอาสาฬหบูชา',
+    '2026-07-30': 'วันเข้าพรรษา',
+    '2026-08-12': 'วันแม่แห่งชาติ',
+    '2026-10-13': 'วันนวมินทรมหาราช',
+    '2026-10-23': 'วันปิยมหาราช',
+    '2026-12-05': 'วันพ่อแห่งชาติ / วันชาติ',
+    '2026-12-07': 'วันชดเชยวันพ่อแห่งชาติ',
+    '2026-12-10': 'วันรัฐธรรมนูญ',
+    '2026-12-31': 'วันสิ้นปี',
+
+    // 2027
+    '2027-01-01': 'วันขึ้นปีใหม่',
+    '2027-02-21': 'วันมาฆบูชา',
+    '2027-02-22': 'วันชดเชยวันมาฆบูชา',
+    '2027-04-06': 'วันจักรี',
+    '2027-04-13': 'วันสงกรานต์',
+    '2027-04-14': 'วันสงกรานต์',
+    '2027-04-15': 'วันสงกรานต์',
+    '2027-05-01': 'วันแรงงานแห่งชาติ',
+    '2027-05-03': 'วันชดเชยวันแรงงานแห่งชาติ',
+    '2027-05-04': 'วันฉัตรมงคล',
+    '2027-05-20': 'วันวิสาขบูชา',
+    '2027-06-03': 'วันเฉลิมพระชนมพรรษาสมเด็จพระบรมราชินี',
+    '2027-07-18': 'วันอาสาฬหบูชา',
+    '2027-07-19': 'วันเข้าพรรษา / ชดเชยวันอาสาฬหบูชา',
+    '2027-07-28': 'วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว',
+    '2027-08-12': 'วันแม่แห่งชาติ',
+    '2027-10-13': 'วันนวมินทรมหาราช',
+    '2027-10-23': 'วันปิยมหาราช',
+    '2027-10-25': 'วันชดเชยวันปิยมหาราช',
+    '2027-12-05': 'วันพ่อแห่งชาติ / วันชาติ',
+    '2027-12-06': 'วันชดเชยวันพ่อแห่งชาติ',
+    '2027-12-10': 'วันรัฐธรรมนูญ',
+    '2027-12-31': 'วันสิ้นปี'
+  };
+
   // --- Calendar Business Logic ---
   function getOperatingRulesForDate(date) {
     const dayOfWeek = date.getDay(); // 0 = Sun, 1 = Mon, ..., 6 = Sat
@@ -212,17 +289,26 @@
       };
     }
 
-    // 2. Custom holiday / Public holiday check
-    const customHoliday = state.customHolidays.find(h => h.date === dateStr);
-    if (customHoliday) {
+    // 2. Automated Thai Public Holiday check
+    if (THAI_PUBLIC_HOLIDAYS[dateStr]) {
       return {
         isClosed: true,
-        reason: `วันหยุดพิเศษ/นักขัตฤกษ์: ${customHoliday.reason}`,
+        reason: `วันหยุดนักขัตฤกษ์: ${THAI_PUBLIC_HOLIDAYS[dateStr]} (ปิดทำการ)`,
         slots: []
       };
     }
 
-    // 3. Saturday vs Weekday
+    // 3. Custom admin holiday check
+    const customHoliday = state.customHolidays.find(h => h.date === dateStr);
+    if (customHoliday) {
+      return {
+        isClosed: true,
+        reason: `วันหยุดพิเศษ: ${customHoliday.reason}`,
+        slots: []
+      };
+    }
+
+    // 4. Saturday vs Weekday
     if (dayOfWeek === 6) {
       return {
         isClosed: false,
@@ -602,6 +688,37 @@
       successModalOverlay.classList.remove('active');
     }
   });
+
+  // --- LINE QR Code Modal Handlers ---
+  const qrCodeModalOverlay = document.getElementById('qrCodeModalOverlay');
+  const openQrModalBtn = document.getElementById('openQrModalBtn');
+  const openQrFromSuccessBtn = document.getElementById('openQrFromSuccessBtn');
+  const closeQrModalBtn = document.getElementById('closeQrModalBtn');
+  const dismissQrModalBtn = document.getElementById('dismissQrModalBtn');
+
+  function openQrModal() {
+    if (qrCodeModalOverlay) {
+      qrCodeModalOverlay.classList.add('active');
+    }
+  }
+
+  function closeQrModal() {
+    if (qrCodeModalOverlay) {
+      qrCodeModalOverlay.classList.remove('active');
+    }
+  }
+
+  if (openQrModalBtn) openQrModalBtn.addEventListener('click', openQrModal);
+  if (openQrFromSuccessBtn) openQrFromSuccessBtn.addEventListener('click', openQrModal);
+  if (closeQrModalBtn) closeQrModalBtn.addEventListener('click', closeQrModal);
+  if (dismissQrModalBtn) dismissQrModalBtn.addEventListener('click', closeQrModal);
+  if (qrCodeModalOverlay) {
+    qrCodeModalOverlay.addEventListener('click', (e) => {
+      if (e.target === qrCodeModalOverlay) {
+        closeQrModal();
+      }
+    });
+  }
 
   // --- Admin Portal Flow ---
   function isAdminLoggedIn() {

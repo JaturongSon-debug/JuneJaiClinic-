@@ -6,6 +6,22 @@
   <meta name="description" content="จุนใจ คลินิก (JuneJai Clinic) คลินิกให้คำปรึกษาและฟื้นฟูสุขภาพใจ ดูแลด้วยใจ ให้คุณสุขภาพดีในทุกช่วงชีวิต จองคิวล่วงหน้าออนไลน์ได้ทันที">
   <meta name="keywords" content="จุนใจคลินิก, JuneJai Clinic, ปรึกษาสุขภาพจิต, บำบัดจิตวิทยา, จองคิวคลินิก, อุตรดิตถ์">
   <title>JuneJai Clinic - จุนใจ คลินิก | จองคิวปรึกษาสุขภาพใจออนไลน์</title>
+
+  <!-- OpenGraph / Facebook / LINE Social Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://junejai-clinic.vercel.app/">
+  <meta property="og:title" content="JuneJai Clinic - จุนใจ คลินิก | จองคิวปรึกษาสุขภาพใจออนไลน์">
+  <meta property="og:description" content="คลินิกให้คำปรึกษาและฟื้นฟูสุขภาพใจ ดูแลด้วยใจ ให้คุณสุขภาพดีในทุกช่วงชีวิต ณ จังหวัดอุตรดิตถ์ ตรวจสอบวันว่างและจองคิวออนไลน์ได้ทันที">
+  <meta property="og:image" content="https://junejai-clinic.vercel.app/brochure-junejai-clinic.jpg">
+  <meta property="og:image:width" content="682">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:locale" content="th_TH">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JuneJai Clinic - จุนใจ คลินิก | จองคิวปรึกษาสุขภาพใจออนไลน์">
+  <meta name="twitter:description" content="คลินิกให้คำปรึกษาและฟื้นฟูสุขภาพใจ ดูแลด้วยใจ ให้คุณสุขภาพดีในทุกช่วงชีวิต ณ จังหวัดอุตรดิตถ์ ตรวจสอบวันว่างและจองคิวออนไลน์ได้ทันที">
+  <meta name="twitter:image" content="https://junejai-clinic.vercel.app/brochure-junejai-clinic.jpg">
   
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
@@ -290,6 +306,9 @@
               <a href="https://line.me/R/ti/p/~junejaiclinic" target="_blank" rel="noopener noreferrer" class="btn-book-cta" style="background: #06C755; justify-content: center;">
                 💬 LINE: junejaiclinic (แอดเพื่อน)
               </a>
+              <button id="openQrModalBtn" type="button" class="btn-admin-portal" style="justify-content: center; border-color: #06C755; color: #05963f; background: #F0FAF3; padding: 10px 14px; font-size: 0.9rem; cursor: pointer;">
+                📷 สแกน QR Code LINE (เปิดบนคอม)
+              </button>
               <div style="background: var(--color-surface-alt); padding: 8px 12px; border-radius: var(--radius-sm); font-size: 0.85rem; color: var(--color-text-body); text-align: left;">
                 • แอดจาก LINE ID: <strong>junejaiclinic</strong><br>
                 • หรือค้นหาด้วยเบอร์: <strong>0804795449</strong>
@@ -463,10 +482,42 @@
           <a id="lineShareConfirmationBtn" href="https://line.me/R/ti/p/~junejaiclinic" target="_blank" rel="noopener noreferrer" class="btn-line-notify">
             💬 ส่งข้อความแจ้งเตือนเข้า LINE: junejaiclinic
           </a>
+          <button id="openQrFromSuccessBtn" type="button" class="btn-admin-portal" style="justify-content: center; padding: 11px; border-color: #06C755; color: #05963f; background: #F0FAF3; cursor: pointer;">
+            📷 สแกน LINE QR Code (เปิดบนคอม)
+          </button>
           <button id="closeSuccessModalBtn" class="btn-admin-portal" style="justify-content: center; padding: 12px;">
             เสร็จสิ้น / กลับสู่หน้าหลัก
           </button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       LINE QR Code Modal (Desktop Friendly)
+       ========================================================================== -->
+  <div id="qrCodeModalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="qrCodeModalHeading">
+    <div class="modal-dialog qr-modal-dialog">
+      <div class="modal-header">
+        <h3 id="qrCodeModalHeading" style="font-size: 1.15rem; color: var(--color-pine); display: flex; align-items: center; gap: 8px;">
+          <span>💬</span> LINE Official Account
+        </h3>
+        <button id="closeQrModalBtn" class="modal-close-btn" aria-label="ปิดหน้าต่าง">✕</button>
+      </div>
+      <div class="modal-body" style="text-align: center; padding: 24px;">
+        <p style="font-size: 0.92rem; color: var(--color-text-muted); margin-bottom: 8px;">
+          สแกน QR Code ด้วยแอปพลิเคชัน LINE เพื่อติดต่อและแจ้งยืนยันคิว
+        </p>
+        <div class="qr-code-frame">
+          <img src="line-qr-code.png" alt="QR Code LINE คลินิก junejaiclinic" width="220" height="220" loading="lazy">
+        </div>
+        <div style="background: var(--color-surface-alt); border: 1px solid var(--color-surface-border); border-radius: var(--radius-sm); padding: 10px 14px; font-size: 0.88rem; color: var(--color-text-body); margin-top: 10px; line-height: 1.6;">
+          • LINE ID: <strong>junejaiclinic</strong><br>
+          • เบอร์โทรศัพท์: <strong>080 479 5449</strong>
+        </div>
+        <button id="dismissQrModalBtn" class="btn-admin-portal" style="margin-top: 18px; width: 100%; justify-content: center; padding: 10px;">
+          ปิดหน้าต่าง
+        </button>
       </div>
     </div>
   </div>
