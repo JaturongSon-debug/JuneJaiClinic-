@@ -7,7 +7,7 @@
   'use strict';
 
   // --- Constants & Config ---
-  const STORAGE_KEY = 'junejai_clinic_state_v3';
+  const STORAGE_KEY = 'junejai_clinic_state_v4';
   const ADMIN_SESSION_KEY = 'junejai_admin_authenticated';
 
   const THAI_MONTHS = [
@@ -22,8 +22,8 @@
   // Default Standard Operating Slots
   // Mon - Fri: 18:00 - 20:00 (2 sessions of 45 mins with 15 min rest)
   const WEEKDAY_SLOTS = [
-    { time: '18:00', endTime: '18:45', label: '18:00 - 18:45 น. (รอบค่ำ 1)' },
-    { time: '19:00', endTime: '19:45', label: '19:00 - 19:45 น. (รอบค่ำ 2)' }
+    { time: '18:00', endTime: '18:45', label: '18:00 - 18:45 น. (รอบเย็น 1)' },
+    { time: '19:00', endTime: '19:45', label: '19:00 - 19:45 น. (รอบเย็น 2)' }
   ];
 
   // Saturday: 09:00 - 16:00 (6 sessions of 45 mins with 15 min rest, lunch break 12:00 - 13:00)
@@ -232,7 +232,7 @@
     } else {
       return {
         isClosed: false,
-        reason: 'วันทำการปกติ (เปิดทำการรอบค่ำ 18:00 - 20:00 น.)',
+        reason: 'วันทำการปกติ (เปิดทำการรอบเย็น 18:00 - 20:00 น.)',
         slots: WEEKDAY_SLOTS
       };
     }
